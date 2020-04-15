@@ -77,6 +77,14 @@
                         <progress value="60" max="100"></progress>
                     </li>
                     <li>
+                        <label class="left-label">ElasticSearch</label>
+                        <progress value="60" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="left-label">RabbitMQ</label>
+                        <progress value="60" max="100"></progress>
+                    </li>
+                    <li>
                         <label class="left-label">Spring Boot</label>
                         <progress value="80" max="100"></progress>
                     </li>
@@ -94,7 +102,7 @@
                         <label class="left-label">前端</label><span class="label-value">Vue、ElementUI</span></li>
                     </li>
                     <li>
-                        <label class="left-label">后端</label><span class="label-value">Java、Shiro、Swagger、MySQL、Redis</span></li>
+                        <label class="left-label">后端</label><span class="label-value">Java、Shiro、Swagger、MySQL、Redis、ElasticSearch、RabbitMQ、JPA</span></li>
                     </li>
                     <li>
                         <label class="left-label">其它</label><span class="label-value">Docker、Linux</span></li>
@@ -138,7 +146,7 @@
                     </li>
                     <li>
                         <h3>苏州同思软件有限公司－实习（2018.5-2018.10）</h3>
-                        <p>参加了纽塔克项目（PC端）的研发。在此项目中负责编写购买设备、 我的订单、 推广中心 、地址管理、售后服务等模块的开发工作。</p>
+                        <p>参加了纽塔克项目的研发。在此项目中负责编写商品管理、品牌管理、赠礼管理、广告列表、品牌推荐、新品推荐等模块的开发工作。</p>
                     </li>
                 </ul class="experience-list">
             </div>
@@ -148,25 +156,19 @@
                 <ul class="experience-list">
                     <li>
                         <h3>蚂蚁喔微商城系统</h3>
-                        <p>微商城系统，分为购物子系统、支付子系统、数据库子系统、安全子系统、库存子系统、物流子系统和财务子系统。核心架构采用了springCloud微服务架构，整合了上述若干子系统。技术栈包括了SpringBoot、MyBatis、 Shiro、 QuartZ、 Echart、 Vue、 Element-UI、 Uni-APP、Swagger、 Redis。数据平台选择的是两种MySQL集群(Replication、PXC) ，由MyCat管理，同时对MyCat做双机热备。NoSQL采用的是Redis Cluster集群。
+                        <p>蚂蚁喔微商城系统是B2C模式的购物系统。该系统分为用户中心模块、购物模块、支付模块、库存模块、安全模块、物流模块和财务模块。技术栈包括了SpringBoot、MyBatis、 Shiro、 QuartZ、 Echart、 Vue、 Element-UI、 Uni-APP、Swagger、 Redis。在此项目，本人搭建了基础层面的Shiro，精确控制角色权限；搭建Swagger方便接口测试和前端查看。业务上，本人负责支付模块和购物车模块，本人利用了redis分布式锁解决了重复提交的问题，用数据库行锁对余额更新进行控制，采用RabbitMQ对支付成功的用户进行通知。在库存模块中，本人提供了redis事务思路，处理商品超售的问题（针对活动商品）。为了方便后期维护，本人还写了一个AOP切面，输出运行日志。
                         </p>
                     </li>
                     <li>
                         <h3>圈招系统</h3>
-                        <p>
-                            圈招系统是针对企业招生的营销系统,该系统采用前后端分离的架构设计，作为核心人员，不但完成了营销模板，报表统计，账户管理等模
-块的开发，还为系统独自开发了后台管理系统，大大提高了系统的完整性和可操作性。在整个项目中，本人还运用一些设计模式和JDK8的语法来尽可能的保证代码的复用和简洁。在开发过程中经常与项目经理沟通，保证进度正常推进，编写单元测试文档，与实习生沟通，分派单元测试任务，通过得到的反馈，修改代码，重新测试， 配合系统工程师进行系统集成测试，及时为系统工程师提供技术帮助。业务上具备微信支付功能。技术架构上面后台项目选择的SpringBoot、 SpringMVC和MyBatis组成的SSM框架, 并且融合了Shiro、Swagger、 阿里云等技术。前端项目采用了VUE+ ElementUI技术架构,小程序采用的mpvue框架。系统部署在Docker中，采用阿里云的负载均衡保证程序运行。
+                        <p>圈招系统是针对企业招生的营销系统。该系统采用前后端分离的架构设计，我主要负责后台管理系统的搭建与开发和小程序端部分模块的开发。后台管理系统采用的是Vue+ElemetUI+Spring Boot+Shiro，全部由本人参考网上资料自己搭建。在文章搜索部分，本人还尝试了ElasticSearch搜索功能，体会到了中文分词搜索的强大。在开发过程中，本人还运用一些设计模式和JDK8的语法来尽可能的保证代码的复用和简洁。最后项目的部署，一开始仅采用Nginx+三台服务器负载均衡。后期为了方便维护管理，统一部署在Docker中，采用阿里云的负载均衡管理。当然了本人也研究了解过k8s,但是由于项目业务需求的原因，最后没有用到。  
                             <br/>
                         </p>
                     </li>
                
                     <li>
                         <h3>纽塔克电商系统</h3>
-                        <p>
-							纽塔克电商系统是B2C模式的商城系统。此项目是我实习期所作的第一个项目 ，在此项目中负
-							责编写购买设备、 我的订单、 推广中心 、地址管理、 售后服务等模块。在这个项目中，我遇到最最困
-							难的问题，就是对新技术的无知，好在公司提供了一些学习视频资料，我通过短暂的学习加上老员工的指
-							点，最终在不断的挑战中完成了一个个工作任务。同年的8月，我顺利接手移动端的开发工作。
+                        <p>纽塔克电商系统是B2C模式的商城系统。此项目是我实习期所作的第一个项目 ，为了适应公司开发的需求，本人还花了几天的时间自学了Vue。在这个微商城系统中，我既做后台管理系统，也做了移动端项目。我负责的模块一共有六个，分别是商品管理、品牌管理、赠礼管理、广告列表、品牌推荐、新品推荐。技术栈包括了SpringBoot、SpringCloud 、MyBatis Plus、 Shiro、 Echart、 Vue、 Element-UI、Swagger、 Redis、ElasticSearch。在商品查询的时候，商品信息采用JSON格式，由于MySQL的索引对字符串优化的不够，所以即便给JSON字段设置了索引，有条件的检索数据，速度也不理想。所以我们统一做成了ES模式，我们把商品的概要信息存储在ES里面，通过ES返回这个商品的主键值，然后程序再去MySQL里面提取这条主键值对应的商品SPU和SKU数据，最后前端程序把数据渲染成HTML页面。
                         </p>
                     </li>
                 </ul>
@@ -175,21 +177,21 @@
                 <h2 class="info-header"><i class="iconfont icon-trophy"></i> <span class="info-title">奖项与证书</span></h2>
                 <hr>
                 <ul class="experience-list">
-                    <li>
-                        <h3>OCJP程序员认证证书</h3>
-                        <p>2015.5获得Oracle认证程序员证书</p>
-                    </li> 
-                    <li>
-                        <h3>计算机二级(Java)</h3>
-                        <p>2015.6获得计算机二级证书</p>
-                    </li> 
+					<li>
+                        <h3>软件设计师</h3>
+                        <p>2019.12获得软考中级软件设计师证书</p>
+                    </li>  
                     <li>
                         <h3>CET4</h3>
                         <p>2017.12获得大学英语四级证书</p>
-                    </li> 
+                    </li>
                     <li>
-                        <h3>软件设计师</h3>
-                        <p>2019.12获得软考中级软件设计师证书</p>
+                        <h3>计算机二级(Java)</h3>
+                        <p>2015.6获得计算机二级证书</p>
+                    </li>
+                    <li>
+                        <h3>OCJP程序员认证证书</h3>
+                        <p>2015.5获得Oracle认证程序员证书</p>
                     </li>                     
             </div>
             <div class="aboutme info-unit right-paragraph">
